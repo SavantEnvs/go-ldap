@@ -1,0 +1,8 @@
+project: savantenvs/go-ldap
+target: fuzz_get_ldap_error
+cmds:
+  - cmd: /mayhem/fuzz_get_ldap_error
+    libfuzzer: true
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_get_ldap_error/testsuite
