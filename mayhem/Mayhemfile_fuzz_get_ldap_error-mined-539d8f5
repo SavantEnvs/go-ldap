@@ -1,0 +1,9 @@
+# seed-from: https://app.mayhem.security/savantenvs/go-ldap/fuzz-get-ldap-error
+project: savantenvs/go-ldap
+target: fuzz_get_ldap_error-mined-539d8f5
+cmds:
+  - cmd: /mayhem/fuzz_get_ldap_error
+    libfuzzer: true
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_get_ldap_error-mined-539d8f5/testsuite
