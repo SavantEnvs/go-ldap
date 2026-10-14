@@ -1,0 +1,8 @@
+project: savantenvs/go-ldap
+target: fuzz_parse_dn-mined-ff74b2c
+cmds:
+  - cmd: /mayhem/fuzz_parse_dn
+    libfuzzer: true
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_parse_dn-mined-ff74b2c/testsuite
